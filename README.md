@@ -11,5 +11,10 @@ Las mecánicas del juego consisten en saltar obstaculos y desplazarse a través 
 
 ## Assets usados
 Todos los assets usados para el desarrollo del juego son gratis y fueron los siguientes:
-### [Free Pixel Font - Thaleah](https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360)
-se encuentra en la página de Unity y en el juego fue usado para el diseño de los niveles, la ranita ninja, las animaciones y el diseño de los menus.
+### [Pixel Adventure 1](https://assetstore.unity.com/packages/2d/characters/pixel-adventure-1-155360)
+Se encuentra en la página de Unity y en el juego fue usado para el diseño de los niveles, la ranita ninja, las animaciones y el diseño de los menus.
+### [Free Pixel Font - Thaleah](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
+Fue usado para cambiar el tipo de letra usada en los menus.
+
+## Estructura del juego
+En proceso...
