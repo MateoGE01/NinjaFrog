@@ -16,5 +16,3 @@ Se encuentra en la página de Unity y en el juego fue usado para el diseño de l
 ### [Free Pixel Font - Thaleah](https://assetstore.unity.com/packages/2d/fonts/free-pixel-font-thaleah-140059)
 Fue usado para cambiar el tipo de letra usada en los menus.
 
-## Estructura del juego
-En proceso...
