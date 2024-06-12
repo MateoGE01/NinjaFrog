@@ -1,5 +1,6 @@
 # NinjaFrog
 ¡Hola a todos!, soy Mateo el creador de NinjaFrog, les estaré dando a conocer de que va el juego, cuales han sido los assets que he usado para desarrollarlo y les estaré explicando la estructura del mismo.
+
 ![image](https://github.com/MateoGE01/NinjaFrog/assets/109986042/6f637174-364c-4322-8208-72e6d8a27d36)
 
 ## Descripción
