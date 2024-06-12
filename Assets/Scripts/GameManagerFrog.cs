@@ -4,10 +4,15 @@ using UnityEngine;
 
 public class GameManagerFrog : MonoBehaviour
 {
+    // Referencia al GameObject de manzanas
     [SerializeField] GameObject apples;
+
+    // Instancia estática de GameManagerFrog para implementar el patrón Singleton
     private static GameManagerFrog instance;
+
+    // Propiedad para acceder a la instancia del GameManagerFrog
     public static GameManagerFrog Instance
-    { 
+    {
         get
         {
             // Si no hay una instancia existente, la crea
@@ -16,7 +21,7 @@ public class GameManagerFrog : MonoBehaviour
                 // Busca la instancia en la escena
                 instance = FindObjectOfType<GameManagerFrog>();
 
-                // Si no se encontr�, crea un nuevo GameObject y adjunta la instancia al componente
+                // Si no se encontró, crea un nuevo GameObject y adjunta la instancia al componente
                 if (instance == null)
                 {
                     GameObject singletonObject = new GameObject(typeof(GameManagerFrog).Name);
@@ -27,8 +32,10 @@ public class GameManagerFrog : MonoBehaviour
         }
     }
 
+    // Método Awake es llamado cuando el script se instancia
     private void Awake()
     {
+        // Si no hay una instancia existente, asigna esta instancia y no la destruye al cargar una nueva escena
         if (instance == null)
         {
             instance = this;
@@ -36,14 +43,15 @@ public class GameManagerFrog : MonoBehaviour
         }
         else
         {
+            // Si ya existe una instancia, destruye este GameObject para mantener el Singleton
             Destroy(gameObject);
         }
-        
     }
 
-    // Update is called once per frame
+    // Update es llamado una vez por frame
     void Update()
     {
+        // Activa el GameObject de manzanas
         apples.gameObject.SetActive(true);
-    }   
+    }
 }

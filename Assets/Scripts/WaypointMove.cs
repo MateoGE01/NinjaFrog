@@ -4,20 +4,26 @@ using UnityEngine;
 
 public class WaypointMove : MonoBehaviour
 {
-    [SerializeField] private GameObject[] waypoints;
-    private int currentWaypoint = 0;
-    [SerializeField] private float speedPlatform = 2.0f;
+    [SerializeField] private GameObject[] waypoints; // Array de GameObjects que representan los puntos de ruta
+    private int currentWaypoint = 0; // √çndice del waypoint actual
+    [SerializeField] private float speedPlatform = 2.0f; // Velocidad de movimiento de la plataforma
+
     // Update is called once per frame
     private void Update()
     {
-        if (Vector2.Distance(transform.position, waypoints[currentWaypoint].transform.position) < 0.1f)//si la distancia entre el punto actual y el siguiente es menor a 0.1
+        // Si la distancia entre la posici√≥n actual y el siguiente waypoint es menor a 0.1 unidades
+        if (Vector2.Distance(transform.position, waypoints[currentWaypoint].transform.position) < 0.1f)
         {
-            currentWaypoint++;//aumenta el Ìndice en waypoints y cambia la direcciÛn al waypoint correspondiente al indice en la lista de waypoints
-            if (currentWaypoint >= waypoints.Length)//si el index del waypoint es mayor o igual a la cantidad de datos en la lista waypoints
+            currentWaypoint++; // Avanza al siguiente waypoint en el arreglo
+
+            // Si el √≠ndice actual supera o iguala la cantidad de waypoints, reinicia al primer waypoint
+            if (currentWaypoint >= waypoints.Length)
             {
-                currentWaypoint = 0;//se reinicia el index al waypoint inicial
+                currentWaypoint = 0;
             }
         }
-        transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypoint].transform.position, speedPlatform * Time.deltaTime);//mueve la plataforma del waypoint actual al siguiente waypoint
+
+        // Mueve la plataforma hacia el siguiente waypoint con una velocidad suavizada
+        transform.position = Vector2.MoveTowards(transform.position, waypoints[currentWaypoint].transform.position, speedPlatform * Time.deltaTime);
     }
 }
